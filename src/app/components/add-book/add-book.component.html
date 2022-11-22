@@ -1,0 +1,34 @@
+<form [formGroup]="subscribeform" (ngSubmit)="  subscribeSubmitted()" class="border p-3 rounded-3">
+    <div class="row g-0">
+        <div class="col text-center p-2 mb-3 bg-light">
+            <span class="fs-3">Subscribe Book</span>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <label for="firstname" class="form-label">Book Id</label>
+            <input type="text" class="form-control" id="firstname" formControlName="bookid">
+            <div class="form-text"></div>
+        </div>
+    </div>
+    <div class ="row">
+        <div class = "col mb-3">
+        <label for="pwd" class="form-label">User Id</label>
+        <input type="password" class="form-control" id="pwd" formControlName="userid">
+    <div class ="form-text"></div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    
+
+    </div>
+    
+    
+  </form>
+

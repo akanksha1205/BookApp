@@ -17,18 +17,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *nfFor="let book of Books; let i = index">
-                    <th scope="row">{{book.id}}</th>
+                <tr *ngFor="let book of Books; let i = index">
+                    <th scope="row">{{book.bookID}}</th>
                     <td>{{book.title}}</td>
                     <td>{{book.author}}</td>
                     <td>{{book.category}}</td>
                     <td>{{book.publisher}}</td>
                     <td>{{book.price}}</td>
                     <td>{{book.content}}</td>
-
-                    <td class="text-center">
-                        <button class="btn btn-sm btn-primay" routerLink="/search"></button>
-                    </td>
+                    <td> <button class="btn btn-warning" (click)="delete(book.bookID,i)">Delete</button></td>
                 </tr>
             </tbody>
         </table>

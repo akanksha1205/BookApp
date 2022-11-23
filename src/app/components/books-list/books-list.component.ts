@@ -1,7 +1,7 @@
 import { CrudService } from 'src/app/service/crud.service';
 import { Book } from './../../service/book';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,23 +10,27 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent {
-Books:any=[];
-constructor(private CrudApi:CrudService,route:Router){}
-ngOnInit():void{
-  this.CrudApi.getBooks().subscribe(res=>{
-    console.log(res);
-    this.Books=res;
-  })
-}
- delete(id:any,i:any){
-   console.log(id);
-   if(window.confirm("Book will be deleted permanentely")){
-      this.CrudApi.deleteBook(id).subscribe(res=>{
-        this.Books.splice(i,1);
+  @Input() public Books: any;
+  userType:any
+  constructor(private crudApi: CrudService, route: Router) { }
+  ngOnInit(): void {
+    console.log(this.Books)
+
+    this.crudApi.userTypeSubject$.subscribe(data => {
+      this.userType = data
+
+      console.log('---usertype on booklist component---', data)
+    })
+  }
+  delete(id: any, i: any) {
+    console.log(id);
+    if (window.confirm("Book will be deleted permanentely")) {
+      this.crudApi.deleteBook(id).subscribe(res => {
+        this.Books.splice(i, 1);
       })
-   }
- } 
-  
+    }
+  }
+
 
 }
 

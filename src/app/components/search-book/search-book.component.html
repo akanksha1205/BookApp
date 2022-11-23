@@ -1,25 +1,30 @@
 <form [formGroup]="searchform" (ngSubmit)="searchSubmitted()">
-    <div class="form-group">
-        <label for="exampleInputEmail1"> Category</label>
-        <input type="email" id="fname" size="10" class="form-control" formControlName="category" >
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Title</label>
-        <input type="email" id="inputEmail" size="50" class="form-control" formControlName="title" >
-      </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Author</label>
-      <input type="email" id="inputEmail" size="50" class="form-control" formControlName="author" >
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Price</label>
-        <input type="email" id="inputEmail" size="50" class="form-control" formControlName="price" >
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Publisher</label>
-        <input type="email" id="inputEmail" size="50" class="form-control"  formControlName="publisher">
-      </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  <div class="form-group">
+    <label for="exampleInputEmail1"> Category</label>
+    <input type="email" id="fname" size="10" class="form-control" formControlName="category">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="email" id="inputEmail" size="50" class="form-control" formControlName="title">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Author</label>
+    <input type="email" id="inputEmail" size="50" class="form-control" formControlName="author">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Price</label>
+    <input type="email" id="inputEmail" size="50" class="form-control" formControlName="price">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Publisher</label>
+    <input type="email" id="inputEmail" size="50" class="form-control" formControlName="publisher">
+  </div>
 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div *ngIf="booklist && booklist.length > 0" style="margin-top: 50px;text-align: center;">
+
+  <app-books-list [Books]="booklist"></app-books-list>
+
+</div>

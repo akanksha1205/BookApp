@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BooksListComponent } from './components/books-list/books-list.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -22,7 +22,8 @@ import { SubscribeComponent } from './components/subscribe/subscribe.component'
     SearchBookComponent,
     RegisterComponent,
     LoginComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    BooksListComponent
   ],
   imports: [
     BrowserModule,

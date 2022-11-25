@@ -1,0 +1,100 @@
+<form [formGroup]="editform" (ngSubmit)="editSubmitted()" class="border p-3 rounded-3">
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    
+
+    <div class="row">
+        <div class="col text-center p-2 mb-3 bg-light">
+            <span class="fs-3">Edit Book</span>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col mb-3">
+            <label for="firstname" class="form-label">User Id</label>
+            <input type="text" class="form-control" id="firstname" formControlName="userid">
+            <div class="form-text"></div>
+        </div>
+        <div class="col mb-3">
+            <label for="firstname" class="form-label">Book Id</label>
+            <input type="text" class="form-control" id="firstname" formControlName="bookid">
+            <div class="form-text"></div>
+        </div>
+        <div class="col ps-3 mb-3">
+            <div class="m-1">Book Active</div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" value="y" id="yes" formControlName="active">
+                <label class="form-check-label" for="author">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" value="n" id="no" formControlName="active">
+                <label class="form-check-label" for="reader">No</label>
+            </div>
+        </div>
+    </div>
+    <div class ="row">
+        <div class = "col mb-3">
+        <label for="email" class="form-label"> Title</label>
+        <input type="text" class="form-control" id="email" formControlName="title">
+    <div class ="form-text"></div>
+    </div>
+    </div>
+    <div class ="row">
+        <div class = "col mb-3">
+        <label for="email" class="form-label"> Author Name</label>
+        <input type="text" class="form-control" id="email" formControlName="author">
+    <div class ="form-text"></div>
+    </div>
+    </div>
+    <div class ="row">
+        <div class = "col mb-3">
+        <label for="pwd" class="form-label">Publisher</label>
+        <input type="text" class="form-control" id="pwd" formControlName="publisher">
+    <div class ="form-text"></div>
+    </div>
+    </div>
+    <div class ="row">
+    <div class = "col  mb-3">
+        <label for="rpwd" class="form-label">Release Date</label>
+        <input type="date" class="form-control" id="rpwd" formControlName="releasedDate">
+    <div class ="form-text"></div>
+    </div>
+    </div>
+    <div class ="row">
+    <div class = "col mb-3">
+        <label for="rpwd" class="form-label">Price</label>
+        <input type="text" class="form-control" id="rpwd" formControlName="price">
+    <div class ="form-text"></div>
+    </div>
+    </div>
+    <div class ="row">
+    <div class = "col mb-3">
+        <label for="rpwd" class="form-label">Content</label>
+        <input type="text" class="form-control" id="rpwd" formControlName="content">
+    <div class ="form-text"></div>
+    </div>
+    </div>
+    <div class ="row">
+    <div class = "col mb-3">
+        <label for="rpwd" class="form-label">Category</label>
+        <input type="text" class="form-control" id="rpwd" formControlName="category">
+    <div class ="form-text"></div>
+    
+
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </div>
+        </div>
+        </div>
+
+    
+
+    
+    
+    
+  </form>
+

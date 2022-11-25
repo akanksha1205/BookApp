@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-item-center pt-3 pb-2 mb-3 border">
+        <h2 class="h2">Your Subscribed Book</h2>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Publisher</th>
+                    <th scope="col">Released Date</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Content</th>
+                    <th scope="col">Active</th>
+                    <th scope ="col">Sub Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{Books.bookID}}</th>
+                    <td>{{Books.title}}</td>
+                    <td>{{Books.author}}</td>
+                    <td>{{Books.category}}</td>
+                    <td>{{Books.publisher}}</td>
+                    <td>{{Books.releasedDate}}</td>
+                    <td>{{Books.price}}</td>
+                    <td>{{Books.content}}</td>
+                    <td>{{Books.active}}</td>
+                    <td>{{Books.SubscriptionID}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
